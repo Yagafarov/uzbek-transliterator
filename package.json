@@ -1,0 +1,29 @@
+{
+  "name": "uzbek-transliterator",
+  "version": "0.0.5",
+  "description": "Lotin ↔ Kirill transliteratsiyasi uchun eng yaxshi npm package",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "transliterate": "./cli.js"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "uzbek",
+    "transliterator",
+    "lotin",
+    "kirill",
+    "latin",
+    "cyrillic"
+  ],
+  "author": "Dinmuhammad Yagafarov",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.28.3",
+    "@babel/preset-env": "^7.28.3",
+    "babel-jest": "^30.0.5",
+    "jest": "^29.7.0"
+  }
+}
