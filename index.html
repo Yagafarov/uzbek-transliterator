@@ -1,67 +1,136 @@
-<h1>Uzbek Transliterator</h1>
-<p><strong>Uzbek Transliterator</strong> — Lotin ↔ Kirill transliteratsiyasi uchun Node.js paketi.<br>Bu paket yordamida siz matnni osonlik bilan lotin va kirill yozuvlari orasida o‘tkazishingiz mumkin.</p>
-<hr>
-<h2>Xususiyatlar</h2>
-<ul>
-<li>Lotin → Kirill transliteratsiyasi</li>
-<li>Kirill → Lotin transliteratsiyasi</li>
-<li>Avtomatik yozuv aniqlash (<code>transliterate</code>)</li>
-<li>Array va Object bilan ishlash qo‘llab-quvvatlanadi</li>
-<li>Maxsus holatlar bilan ishlash: <code>Yo/yo</code>, <code>E/Ye</code>, <code>O&#39;/G&#39;</code></li>
-</ul>
-<hr>
-<h2>O‘rnatish</h2>
-<pre><code class="language-bash">npm install uzbek-transliterator
-</code></pre>
-<hr>
-<h2>Foydalanish</h2>
-<h3>CommonJS (Node.js)</h3>
-<pre><code class="language-js">const { latinToCyrillic, cyrillicToLatin, transliterate } = require(&quot;uzbek-transliterator&quot;);
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Uzbek Transliterator</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans leading-relaxed">
+  <main class="max-w-4xl mx-auto p-6 sm:p-10">
+    <h1 class="text-4xl font-semibold mb-6 border-b-4 border-blue-600 pb-2">
+      Uzbek Transliterator
+    </h1>
+    <p class="text-lg mb-6">
+      <strong class="font-semibold">Uzbek Transliterator</strong> — Lotin ↔ Kirill transliteratsiyasi uchun Node.js paketi.<br />
+      Bu paket yordamida siz matnni osonlik bilan lotin va kirill yozuvlari orasida o‘tkazishingiz mumkin.
+    </p>
+
+    <hr class="my-8 border-gray-300" />
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-4 text-blue-700 border-l-4 border-blue-600 pl-3">
+        Xususiyatlar
+      </h2>
+      <ul class="list-disc list-inside space-y-1 text-gray-800">
+        <li>Lotin → Kirill transliteratsiyasi</li>
+        <li>Kirill → Lotin transliteratsiyasi</li>
+        <li>Avtomatik yozuv aniqlash (<code class="bg-gray-200 rounded px-1">transliterate</code>)</li>
+        <li>Array va Object bilan ishlash qo‘llab-quvvatlanadi</li>
+        <li>Maxsus holatlar bilan ishlash: <code class="bg-gray-200 rounded px-1">Yo/yo</code>, <code class="bg-gray-200 rounded px-1">E/Ye</code>, <code class="bg-gray-200 rounded px-1">O'/G'</code></li>
+      </ul>
+    </section>
+
+    <hr class="my-8 border-gray-300" />
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-4 text-blue-700 border-l-4 border-blue-600 pl-3">
+        O‘rnatish
+      </h2>
+      <pre class="bg-gray-100 p-4 rounded text-sm font-mono text-gray-900 overflow-x-auto">npm install uzbek-transliterator
+      </pre>
+    </section>
+
+    <hr class="my-8 border-gray-300" />
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-4 text-blue-700 border-l-4 border-blue-600 pl-3">
+        Foydalanish
+      </h2>
+
+      <h3 class="text-xl font-semibold mb-2 mt-6">CommonJS (Node.js)</h3>
+      <pre class="bg-gray-100 p-4 rounded text-sm font-mono text-gray-900 overflow-x-auto">
+const { latinToCyrillic, cyrillicToLatin, transliterate } = require("uzbek-transliterator");
 
 // Latin → Cyrillic
-console.log(latinToCyrillic(&quot;Salom, dunyo! O&#39;zbekiston g&#39;oyasi.&quot;));
+console.log(latinToCyrillic("Salom, dunyo! O'zbekiston g'oyasi."));
 // Natija: Салом, дунё! Ўзбекистон ғояси.
 
 // Cyrillic → Latin
-console.log(cyrillicToLatin(&quot;Салом, дунё! Ўзбекистон ғояси.&quot;));
-// Natija: Salom, dunyo! O&#39;zbekiston g&#39;oyasi.
+console.log(cyrillicToLatin("Салом, дунё! Ўзбекистон ғояси."));
+// Natija: Salom, dunyo! O'zbekiston g'oyasi.
 
 // Avtomatik transliteratsiya
-console.log(transliterate(&quot;Salom, dunyo!&quot;));   // Салом, дунё!
-console.log(transliterate(&quot;Салом, дунё!&quot;));    // Salom, dunyo!
-</code></pre>
-<h3>ES Module</h3>
-<p>Agar <code>&quot;type&quot;: &quot;module&quot;</code> ishlatilsa:</p>
-<pre><code class="language-js">import { latinToCyrillic, cyrillicToLatin, transliterate } from &quot;uzbek-transliterator&quot;;
+console.log(transliterate("Salom, dunyo!"));   // Салом, дунё!
+console.log(transliterate("Салом, дунё!"));    // Salom, dunyo!
+      </pre>
 
-console.log(latinToCyrillic(&quot;Salom, dunyo!&quot;));
-</code></pre>
-<hr>
-<h2>CLI (Command Line Interface)</h2>
-<p>Fayl o‘rnatilgandan so‘ng terminalda ishlatish mumkin:</p>
-<pre><code class="language-bash">npx transliterate &quot;Salom, dunyo!&quot;
+      <h3 class="text-xl font-semibold mb-2 mt-8">ES Module</h3>
+      <p>Agar <code class="bg-gray-200 rounded px-1">"type": "module"</code> ishlatilsa:</p>
+      <pre class="bg-gray-100 p-4 rounded text-sm font-mono text-gray-900 overflow-x-auto">
+import { latinToCyrillic, cyrillicToLatin, transliterate } from "uzbek-transliterator";
+
+console.log(latinToCyrillic("Salom, dunyo!"));
+      </pre>
+    </section>
+
+    <hr class="my-8 border-gray-300" />
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-4 text-blue-700 border-l-4 border-blue-600 pl-3">
+        CLI (Command Line Interface)
+      </h2>
+      <p>Fayl o‘rnatilgandan so‘ng terminalda ishlatish mumkin:</p>
+      <pre class="bg-gray-100 p-4 rounded text-sm font-mono text-gray-900 overflow-x-auto">
+npx transliterate "Salom, dunyo!"
 # Natija: Салом, дунё!
-</code></pre>
-<hr>
-<h2>Array va Object bilan ishlash</h2>
-<pre><code class="language-js">// Array
-const arr = [&quot;Salom&quot;, &quot;Dunyo&quot;];
+      </pre>
+    </section>
+
+    <hr class="my-8 border-gray-300" />
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-4 text-blue-700 border-l-4 border-blue-600 pl-3">
+        Array va Object bilan ishlash
+      </h2>
+      <pre class="bg-gray-100 p-4 rounded text-sm font-mono text-gray-900 overflow-x-auto">
+// Array
+const arr = ["Salom", "Dunyo"];
 console.log(latinToCyrillic(arr));
-// Natija: [&quot;Салом&quot;, &quot;Дунё&quot;]
+// Natija: ["Салом", "Дунё"]
 
 // Object
-const obj = { a: &quot;Salom&quot;, b: &quot;Dunyo&quot; };
+const obj = { a: "Salom", b: "Dunyo" };
 console.log(cyrillicToLatin(latinToCyrillic(obj)));
-// Natija: { a: &quot;Salom&quot;, b: &quot;Dunyo&quot; }
-</code></pre>
-<hr>
-<h2>Testlar</h2>
-<p>Testlarni ishga tushurish uchun:</p>
-<pre><code class="language-bash">npm test
-</code></pre>
-<blockquote>
-<p>Paket <code>Jest</code> yordamida test qilingan. Array, Object va maxsus hollardagi transliteratsiyalar testlarga kiritilgan.</p>
-</blockquote>
-<hr>
-<h2>Litsenziya</h2>
-<p>MIT © <a href="'https://github.com/yagafarov/'">Dinmuhammad Yagafarov</a></p>
+// Natija: { a: "Salom", b: "Dunyo" }
+      </pre>
+    </section>
+
+    <hr class="my-8 border-gray-300" />
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-4 text-blue-700 border-l-4 border-blue-600 pl-3">
+        Testlar
+      </h2>
+      <p>Testlarni ishga tushurish uchun:</p>
+      <pre class="bg-gray-100 p-4 rounded text-sm font-mono text-gray-900 overflow-x-auto">
+npm test
+      </pre>
+      <blockquote class="border-l-4 border-blue-600 pl-4 italic text-gray-700 mt-4">
+        Paket <code class="bg-gray-200 rounded px-1">Jest</code> yordamida test qilingan. Array, Object va maxsus hollardagi transliteratsiyalar testlarga kiritilgan.
+      </blockquote>
+    </section>
+
+    <hr class="my-8 border-gray-300" />
+
+    <section class="mb-16">
+      <h2 class="text-2xl font-semibold mb-4 text-blue-700 border-l-4 border-blue-600 pl-3">
+        Litsenziya
+      </h2>
+      <p>
+        MIT © <a href="https://github.com/yagafarov" target="_blank" class="text-blue-600 hover:underline">Dinmuhammad Yagafarov</a>
+      </p>
+    </section>
+  </main>
+</body>
+</html>
