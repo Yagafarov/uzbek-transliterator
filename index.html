@@ -1,0 +1,67 @@
+<h1>Uzbek Transliterator</h1>
+<p><strong>Uzbek Transliterator</strong> — Lotin ↔ Kirill transliteratsiyasi uchun Node.js paketi.<br>Bu paket yordamida siz matnni osonlik bilan lotin va kirill yozuvlari orasida o‘tkazishingiz mumkin.</p>
+<hr>
+<h2>Xususiyatlar</h2>
+<ul>
+<li>Lotin → Kirill transliteratsiyasi</li>
+<li>Kirill → Lotin transliteratsiyasi</li>
+<li>Avtomatik yozuv aniqlash (<code>transliterate</code>)</li>
+<li>Array va Object bilan ishlash qo‘llab-quvvatlanadi</li>
+<li>Maxsus holatlar bilan ishlash: <code>Yo/yo</code>, <code>E/Ye</code>, <code>O&#39;/G&#39;</code></li>
+</ul>
+<hr>
+<h2>O‘rnatish</h2>
+<pre><code class="language-bash">npm install uzbek-transliterator
+</code></pre>
+<hr>
+<h2>Foydalanish</h2>
+<h3>CommonJS (Node.js)</h3>
+<pre><code class="language-js">const { latinToCyrillic, cyrillicToLatin, transliterate } = require(&quot;uzbek-transliterator&quot;);
+
+// Latin → Cyrillic
+console.log(latinToCyrillic(&quot;Salom, dunyo! O&#39;zbekiston g&#39;oyasi.&quot;));
+// Natija: Салом, дунё! Ўзбекистон ғояси.
+
+// Cyrillic → Latin
+console.log(cyrillicToLatin(&quot;Салом, дунё! Ўзбекистон ғояси.&quot;));
+// Natija: Salom, dunyo! O&#39;zbekiston g&#39;oyasi.
+
+// Avtomatik transliteratsiya
+console.log(transliterate(&quot;Salom, dunyo!&quot;));   // Салом, дунё!
+console.log(transliterate(&quot;Салом, дунё!&quot;));    // Salom, dunyo!
+</code></pre>
+<h3>ES Module</h3>
+<p>Agar <code>&quot;type&quot;: &quot;module&quot;</code> ishlatilsa:</p>
+<pre><code class="language-js">import { latinToCyrillic, cyrillicToLatin, transliterate } from &quot;uzbek-transliterator&quot;;
+
+console.log(latinToCyrillic(&quot;Salom, dunyo!&quot;));
+</code></pre>
+<hr>
+<h2>CLI (Command Line Interface)</h2>
+<p>Fayl o‘rnatilgandan so‘ng terminalda ishlatish mumkin:</p>
+<pre><code class="language-bash">npx transliterate &quot;Salom, dunyo!&quot;
+# Natija: Салом, дунё!
+</code></pre>
+<hr>
+<h2>Array va Object bilan ishlash</h2>
+<pre><code class="language-js">// Array
+const arr = [&quot;Salom&quot;, &quot;Dunyo&quot;];
+console.log(latinToCyrillic(arr));
+// Natija: [&quot;Салом&quot;, &quot;Дунё&quot;]
+
+// Object
+const obj = { a: &quot;Salom&quot;, b: &quot;Dunyo&quot; };
+console.log(cyrillicToLatin(latinToCyrillic(obj)));
+// Natija: { a: &quot;Salom&quot;, b: &quot;Dunyo&quot; }
+</code></pre>
+<hr>
+<h2>Testlar</h2>
+<p>Testlarni ishga tushurish uchun:</p>
+<pre><code class="language-bash">npm test
+</code></pre>
+<blockquote>
+<p>Paket <code>Jest</code> yordamida test qilingan. Array, Object va maxsus hollardagi transliteratsiyalar testlarga kiritilgan.</p>
+</blockquote>
+<hr>
+<h2>Litsenziya</h2>
+<p>MIT © <a href="'https://github.com/yagafarov/'">Dinmuhammad Yagafarov</a></p>
