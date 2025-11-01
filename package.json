@@ -1,5 +1,5 @@
 {
-  "name": "uzbek-transliterator",
+  "name": "@Yagafarov/uzbek-transliterator",
   "version": "0.0.6",
   "description": "Lotin ↔ Kirill transliteratsiyasi uchun eng yaxshi npm package",
   "main": "index.js",
@@ -9,7 +9,10 @@
     "url": "git+https://github.com/Yagafarov/uzbek-transliterator.git"
   },
   "bin": {
-    "transliterate": "./cli.js"
+    "transliterate": "cli.js"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "scripts": {
     "test": "jest"
