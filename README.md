@@ -2,7 +2,11 @@
 
 **Uzbek Transliterator** — Lotin ↔ Kirill transliteratsiyasi uchun Node.js paketi.\
 Bu paket yordamida siz matnni osonlik bilan lotin va kirill yozuvlari orasida o‘tkazishingiz mumkin.
-
+---
+[![npm version](https://img.shields.io/npm/v/uzbek-transliterator.svg)](https://www.npmjs.com/package/uzbek-transliterator)
+[![npm downloads](https://img.shields.io/npm/dm/uzbek-transliterator.svg)](https://www.npmjs.com/package/uzbek-transliterator)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/yagafarov/uzbek-transliterator/blob/main/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/yagafarov/uzbek-transliterator?style=social)](https://github.com/yagafarov/uzbek-transliterator/stargazers)
 ---
 
 ## Xususiyatlar
