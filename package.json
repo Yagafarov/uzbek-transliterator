@@ -1,5 +1,5 @@
 {
-  "name": "@Yagafarov/uzbek-transliterator",
+  "name": "@yagafarov/uzbek-transliterator",
   "version": "0.0.6",
   "description": "Lotin ↔ Kirill transliteratsiyasi uchun eng yaxshi npm package",
   "main": "index.js",
